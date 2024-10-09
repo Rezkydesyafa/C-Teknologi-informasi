@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile C",
+      "type": "shell",
+      "command": "g++",
+      "args": ["-std=c11", ".\\src\\*.cpp", "-o", ".\\bin\\main.exe"]
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "command": ".\\bin\\main",
+      "dependsOn": ["Compile C"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
