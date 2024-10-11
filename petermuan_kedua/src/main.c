@@ -1,4 +1,4 @@
-#include <stdio.h> //library standar C
+#include <stdio.h>
 #include<conio.h>
 int main()
 {
@@ -6,9 +6,9 @@ int main()
 
     int a, b, c, d, hasil;    
 
-    printf("Masukkan nilai a = ");     
+    printf("\nMasukkan nilai a = ");     
     scanf("%i",&a);
-    printf("Masukkan nilai b = ");     
+    printf("\nMasukkan nilai b = ");     
     scanf("%i",&b);
     printf("\nMasukkan nilai c = ");
     scanf("%i",&c);
@@ -24,7 +24,7 @@ int main()
     hasil = b * c;     
     printf("\nHasil dari: b * c adalah %d\n", hasil);     
     hasil = a / d;     
-    printf("\nHasil dari: a / d adalah %d\n", hasil);     
+    printf("\nHasil dari: a / d adalah %d\n", hasil);
     hasil = a + b * c - d;     
     printf("\nHasil dari: a + b * c - d adalah %d\n", hasil);     
     hasil = a * b + c / d;     

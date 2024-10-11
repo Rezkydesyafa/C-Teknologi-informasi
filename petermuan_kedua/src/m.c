@@ -7,8 +7,7 @@ int main() {
     
 
     char nama_Pelanggan[50], id_Pelanggan[20];
-    float tarif = 5000, kecepatan, biaya_tetap = 100000, totalTagihan, tagihan, diskon = 0.0;
-
+    float tarif = 5000, kecepatan, biaya_tetap = 100000, totalTagihan, tagihan, pajak_PPN ,diskon = 0.0;
     time_t waktu_sekarang;
     struct tm *info_waktu;
     char buffer[20];
@@ -20,10 +19,9 @@ int main() {
 
 
 
-    printf("Program Tagihan Internet Wifi\n\n");
-    printf("---------------------------------------\n");
+    printf("\nProgram Tagihan Internet Wifi\n\n");
     printf("=========== Data Pelangggan ===========\n");
-
+    printf("---------------------------------------\n");
     printf("Masukkan Nama Pelanggan : ");
     scanf("%[^\n]s",&nama_Pelanggan);
     printf("Masukkan ID Pelanggan   : ");
@@ -31,25 +29,25 @@ int main() {
     printf("Masukkan Kecepatan      : ");
     scanf("%f",&kecepatan); 
 
-    // tugas !!!s
-    // tambahin logic diskon
-    tagihan = (kecepatan *tarif)+ biaya_tetap; // blab
+
+    tagihan = (kecepatan *tarif)+ biaya_tetap; 
+    pajak_PPN = 0.11*tagihan;
     diskon = (kecepatan >=20)*0.15*tagihan;
     totalTagihan = tagihan - diskon;
 
-    printf("\n===== Rincian Tagihan =====\n");
-    printf("Tanggal: %s\n", buffer);
-    printf("----------------------------\n");
+    printf("\n=========== Rincian Tagihan ===========\n");
+    printf("Tanggal: %s/TRX-%s \n", buffer,id_Pelanggan);
+    printf("---------------------------------------\n");
     printf("Nama Pelanggan          : %s\n", nama_Pelanggan);
-    printf("ID Pelanggan            : %s\n", id_Pelanggan);
+    printf("ID Pelanggan            : TRX-%s\n", id_Pelanggan);
     printf("Kecepatan               : %.f Mbps\n", kecepatan);
-    printf("Biaya Tetap             : Rp %.2f\n", biaya_tetap);
-    printf("Tagihan                 : Rp %.2f\n", tagihan);
-    printf("Diskon                  : Rp %.2f\n", diskon);
-    printf("----------------------------\n");
-    printf("Total Tagihan           : Rp %.2f\n", totalTagihan);
-    printf("----------------------------\n");
-    printf("============================\n");
+    printf("Biaya Tetap             : Rp. %.2f\n", biaya_tetap);
+    printf("Tagihan                 : Rp. %.2f\n", tagihan);
+    printf("Pajak PPN               : Rp. %.2f\n", pajak_PPN);
+    printf("Diskon                  : Rp. %.2f\n", diskon);
+    printf("---------------------------------------\n");
+    printf("Total Tagihan           : Rp. %.2f\n", totalTagihan);
+    printf("---------------------------------------\n");
 
     return 0;
 
