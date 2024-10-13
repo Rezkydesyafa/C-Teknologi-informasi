@@ -1,23 +1,31 @@
+/* File : Tugas_2.c*/
+/* program tagihan*/
+/* tagihan variable, assigment, inisialisasi...*/
+
+
+/*library*/
+/* 
+#include <stdio.h>
+#include <math.h>
+#include <time.h>
+*/
+
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
 
-
 int main() {
-    
-
+    /* Deklarasi variable */
     char nama_Pelanggan[50], id_Pelanggan[20];
-    float tarif = 5000, kecepatan, biaya_tetap = 100000, totalTagihan, tagihan, pajak_PPN ,diskon = 0.0;
+    float tarif = 300, kecepatan, biaya_tetap = 150000, totalTagihan, tagihan, FUP, pajak_PPN ,diskon = 0.0;
     time_t waktu_sekarang;
     struct tm *info_waktu;
     char buffer[20];
 
+    // mengambil data watktu
     time(&waktu_sekarang);
     info_waktu = localtime(&waktu_sekarang);
     strftime(buffer, sizeof(buffer), "%d/%m/%Y", info_waktu);
-
-
-
 
     printf("\nProgram Tagihan Internet Wifi\n\n");
     printf("=========== Data Pelangggan ===========\n");
@@ -28,19 +36,22 @@ int main() {
     scanf("%s",&id_Pelanggan);
     printf("Masukkan Kecepatan      : ");
     scanf("%f",&kecepatan); 
+    printf("Masukkan FUP            : ");
+    scanf("%f",&FUP); 
 
-
-    tagihan = (kecepatan *tarif)+ biaya_tetap; 
+    /* ALGORITMA */
+    tagihan = (FUP *tarif)+ biaya_tetap; 
+    diskon = (kecepatan >=20)*0.20*tagihan;
     pajak_PPN = 0.11*tagihan;
-    diskon = (kecepatan >=20)*0.15*tagihan;
-    totalTagihan = tagihan - diskon;
-
+    totalTagihan = tagihan + pajak_PPN - diskon;
+    
     printf("\n=========== Rincian Tagihan ===========\n");
     printf("Tanggal: %s/TRX-%s \n", buffer,id_Pelanggan);
     printf("---------------------------------------\n");
     printf("Nama Pelanggan          : %s\n", nama_Pelanggan);
     printf("ID Pelanggan            : TRX-%s\n", id_Pelanggan);
     printf("Kecepatan               : %.f Mbps\n", kecepatan);
+    printf("FUP                     : %.f GB \n", FUP);
     printf("Biaya Tetap             : Rp. %.2f\n", biaya_tetap);
     printf("Tagihan                 : Rp. %.2f\n", tagihan);
     printf("Pajak PPN               : Rp. %.2f\n", pajak_PPN);
@@ -50,6 +61,21 @@ int main() {
     printf("---------------------------------------\n");
 
     return 0;
+};
+
+/* File : Tugas_2.c*/
+/* program tagihan*/
+/* tagihan variable, assigment, inisialisasi...*/
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -66,20 +92,20 @@ int main() {
 //         waktu_sekarang=time_t
 //         info_waktu=struct
 //         buffer=char
-    // ALGORITMA
-    // scanf (nama_Pelanggan) {masukan nama pelanggan}
-    // scanf (id_Pelanggan)   {masukan tunjangan}
-    // scanf (kecepatan)      {masukan kecepatan}
-    // tagihan  ←  (kecepatan *tarif)+biaya_tetap
-    // diskon  ← (kecepatan >=20)*0.15*tagihan
-    // totalTagihan  ← tagihan - diskon
-    // printf (nama_Pelanggan) {namapelanggan}
-    // printf (id_Pelanggan)   {idpelanggan}
-    // printf (kecepatan)      {kecepatan}
-    // printf (biaya_tetap)    {biayatetap}
-    // printf (tagihan)        {kecepatan dikali tarif ditambah biayatetap}
-    // printf (diskon)         {kecepatan lebih dari sama dengan 20 }
-    // printf (hasil)          {tagihan dikurangi diskon}
+//     ALGORITMA
+//     scanf (nama_Pelanggan) {masukan nama pelanggan}
+//     scanf (id_Pelanggan)   {masukan tunjangan}
+//     scanf (kecepatan)      {masukan kecepatan}
+//     tagihan  ←  (kecepatan *tarif)+biaya_tetap
+//     diskon  ← (kecepatan >=20)*0.15*tagihan
+//     totalTagihan  ← tagihan - diskon
+//     printf (nama_Pelanggan) {namapelanggan}
+//     printf (id_Pelanggan)   {idpelanggan}
+//     printf (kecepatan)      {kecepatan}
+//     printf (biaya_tetap)    {biayatetap}
+//     printf (tagihan)        {kecepatan dikali tarif ditambah biayatetap}
+//     printf (diskon)         {kecepatan lebih dari sama dengan 20 }
+//     printf (hasil)          {tagihan dikurangi diskon}
     
 
 // Algoritma_hitungTagihanInternet
@@ -94,6 +120,7 @@ int main() {
 // Input kecepatan
 // tagihan = (kecepatan *tarif)+biaya_tetap
 // diskon  = (kecepatan >=20)*0.15*tagihan
+// pajak_PPN = 0.11*tagihan;
 // totalTagihan = tagihan - diskon
 // Cetak tagihan Internet
 
@@ -158,4 +185,3 @@ int main() {
 
     
 
-};

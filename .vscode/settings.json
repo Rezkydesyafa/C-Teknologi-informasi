@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.ejs": "html",
+    "aktivitas_mhs2.C": "cpp"
+  }
+}

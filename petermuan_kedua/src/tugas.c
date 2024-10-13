@@ -8,7 +8,7 @@ int main(void)
     float celc, fahr, kelv, ream ; //Ini Deklarasi variable
     
     printf("Input suhu celsius: ");             
-    scanf("%f",&celc);
+    scanf("%f",&celc); // %f merupakan type variable
     printf("\n");
     
     // Dibawah ini merupakan assignment
