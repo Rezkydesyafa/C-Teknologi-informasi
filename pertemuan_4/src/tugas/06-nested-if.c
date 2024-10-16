@@ -19,10 +19,7 @@ int main(){
         }
     }else{
         printf("Anda belum terdaftar \n");
-    }
-    
-    
-
+    }  
     
 }
 
