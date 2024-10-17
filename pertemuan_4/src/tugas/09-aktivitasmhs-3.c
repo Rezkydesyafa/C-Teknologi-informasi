@@ -8,7 +8,7 @@ int main()
     char makul;
     printf("Program Nilai Mata Kuliah");
     printf("\n-------------------------");
-    printf("\n--------Daftar Makul-------");
+    printf("\t\n--------Daftar Makul-------");
     printf("\nA. Dasar Pemrograman Teori");
     printf("\nB. Dasar Pemrograman Praktikum");
     printf("\nPilih Makul [A/B]: ");
@@ -19,7 +19,6 @@ int main()
     case 'A':
         printf("\nMasukan Nilai : ");
         scanf("%i", &nilai);
-        printf("%d",nilai);
         switch (nilai/10)
         {
             case 1:
