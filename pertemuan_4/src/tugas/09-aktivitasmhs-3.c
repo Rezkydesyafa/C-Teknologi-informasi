@@ -69,7 +69,7 @@ int main()
                 break;
             case 9 :
             case 10 :
-                printf("\n Nilai anda a \n");   
+                printf("\n Nilai anda A \n");   
                 break;
             
             default: printf("\n salah input");

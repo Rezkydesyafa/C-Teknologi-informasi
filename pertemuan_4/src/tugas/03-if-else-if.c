@@ -27,7 +27,7 @@ int main()
     } else {
         grade = 'F';
     }
-
+    
     printf("\nNilai: %i\n", nilai);
     printf("Grade anda: %c\n", grade);
 }
