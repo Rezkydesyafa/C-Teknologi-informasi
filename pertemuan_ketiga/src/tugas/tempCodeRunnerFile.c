@@ -1,0 +1,1 @@
+tf("\n Luas persegi: %lf\n", hasil);

@@ -16,9 +16,9 @@ int main() {
     switch (pilih)
     {
     case 1:
-        printf("Program Menghitung Bangun Datar\n");
-        printf("1. Persegi\n");
-        printf("2. Persegi Panjang\n");
+        printf("\n Menghitung luas dan Keliling\n");
+        printf("1. Luas\n");
+        printf("2. Keliling\n");
         printf("Input pilihan : \n");   
         scanf("%i",&pilihan);
 
