@@ -1,1 +1,0 @@
-    // data_diri[i][strcspn(data_diri[i], "\n")] = '\0';

@@ -7,9 +7,12 @@ int main() {
         "Nama Lengkap",
         "Nama panggilan",
         "Asal kota",
+        "Jenis kelamin",
+        "Alamat",
         "Domisili",
         "Kota Lahir",
         "Kewarganegaraan",
+        "Agama",
         "Hobi",
         "Status",
         "Universitas",
@@ -17,10 +20,7 @@ int main() {
         "Prodi",
         "Cita - cita",
         "Role",
-        "Jenis kelamin",
-        "Alamat",
         "Pekerjaan",
-        "Agamma",
         "Pendidikan terakhir",
         "Bahasa favorit",
         "Framework favorit",
@@ -32,10 +32,6 @@ int main() {
     printf("====================================\n");
     printf("        Masukan Data Diri Anda       \n");
     printf("====================================\n");
-
-
-
-
     do{
         printf("%d. Masukan %s : ", i + 1,list_data_diri[i]);
         scanf(" %[^\n]", data_diri[i]);
@@ -43,15 +39,11 @@ int main() {
         i++;
     } while (i < jumlah_data );
     
-
-
     printf("\n====================================\n");
     printf("        Daftar Data Diri Anda        \n");
     printf("====================================\n");
 
     int k = 0;
-    
-
     do {
         printf("%d. %s : %s\n", k + 1,list_data_diri[k], data_diri[k]);
         k++;
