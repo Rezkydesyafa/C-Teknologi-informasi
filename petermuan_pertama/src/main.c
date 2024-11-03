@@ -18,15 +18,7 @@ int main(){
     char universitas[20];
     char cita_cita[20];
 
-    char status;
-    status = "lajang";
-    
 
-
-    int usia;
-    usia = 18;
-
-    printf ("usia sherin %i tahun" , usia);
 
 // // Input
 // // ------

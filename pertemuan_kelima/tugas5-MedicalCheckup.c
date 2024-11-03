@@ -5,7 +5,7 @@
 
 int main() {
     char nama[50], jenisKelamin[10], alamat [50], tanggal[50], transaction, lanjut;
-    int umur, pilihanJenisLayanan, pilihanPaket, subPilihan, randomNumber, layananCount = 0;
+    int umur, pilihanJenisLayanan, pilihanPaket, subPilihan, tekananDarah, randomNumber, layananCount = 0;
     float totalHarga = 0.0;
     char layananDipilih[5][50]; //array
 
@@ -21,7 +21,7 @@ int main() {
 
 do{
 
-    printf("\n     Medical Check-Up RS UNISA   \n");
+    printf("\n      Medical Check-Up RS UNISA   \n");
     printf("====================================\n");
     printf("  Tanggal : %s   \n",tanggal);
     printf("       Masukan data Pasien \n");
@@ -165,10 +165,9 @@ do{
     } else {
         printf("Pilihan tidak valid.\n");
     }
-    
 
-    printf("------------------------------------\n");
-    printf("\n  Rincian Data Pasien dan Biaya   \n");
+    printf("\n------------------------------------\n");
+    printf("   Rincian Data Pasien dan Biaya   \n");
     printf("------------------------------------\n");
     printf("Tanggal: %s-TRX-%d \n", tanggal, randomNumber);
     printf("====================================\n");
