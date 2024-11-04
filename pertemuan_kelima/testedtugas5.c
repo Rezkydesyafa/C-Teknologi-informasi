@@ -7,9 +7,11 @@ int main() {
     float totalBiaya = 0;
     
     do {
-        // Input data pasien
-        printf("\n=== PROGRAM MEDICAL CHECK UP RS UNISA ===\n");
+        printf("------------------------------------\n");
+        printf("     Medical Check-Up RS UNISA   \n");
+        printf("------------------------------------\n");
         printf("Masukkan data pasien ke-%d\n", jumlahPasien + 1);
+        printf("------------------------------------\n");
         printf("Nama Pasien: ");
         scanf(" %[^\n]s", nama);
         printf("Umur: ");
@@ -18,22 +20,21 @@ int main() {
         scanf(" %s", jenisKelamin);
         
         do {
-            // Menu paket Medical Check Up
             printf("\nPilih Paket Medical Check Up:\n");
-            printf("1. Paket Basic (Rp. 500.000)\n");
-            printf("   - Cek Tekanan Darah\n");
-            printf("   - Cek Gula Darah\n");
-            printf("   - Cek Kolesterol\n");
+            printf("1. Layanan Basic (Rp. 800.000)\n");
+            printf("   Cek Tekanan Darah\n");
+            printf("   Cek Gula Darah\n");
+            printf("   Cek Kolesterol\n");
             
-            printf("2. Paket Premium (Rp. 1.500.000)\n");
-            printf("   - Semua pemeriksaan Basic\n");
-            printf("   - Rontgen Dada\n");
-            printf("   - EKG Jantung\n");
+            printf("2. Layanan Extra (Rp. 1.600.000)\n");
+            printf("   Semua pemeriksaan Basic\n");
+            printf("   Rontgen Dada\n");
+            printf("   EKG Jantung\n");
             
-            printf("3. Paket Executive (Rp. 3.000.000)\n");
-            printf("   - Semua pemeriksaan Premium\n");
-            printf("   - CT Scan\n");
-            printf("   - Pemeriksaan Kanker\n");
+            printf("3. Layanan Executive (Rp. 2.500.000)\n");
+            printf("   Semua pemeriksaan Premium\n");
+            printf("   CT Scan\n");
+            printf("   Pemeriksaan Kanker\n");
             
             printf("Pilihan Anda (1-3): ");
             scanf("%d", &pilihan);
@@ -42,11 +43,11 @@ int main() {
             if (pilihan >= 1 && pilihan <= 3) {
                 float biaya = 0;
                 if (pilihan == 1) {
-                    biaya = 500000;
+                    biaya = 800000;
                 } else if (pilihan == 2) {
-                    biaya = 1500000;
+                    biaya = 1600000;
                 } else {
-                    biaya = 3000000;
+                    biaya = 2500000;
                 }
                 
                 // Diskon berdasarkan umur
@@ -68,17 +69,18 @@ int main() {
         
         jumlahPasien++;
         
-        // Tanya apakah ada pasien lain
         printf("\nApakah ada pasien lain? (y/n): ");
         scanf(" %c", &lanjut);
         
     } while (lanjut == 'y' || lanjut == 'Y');
-    
-    // Tampilkan ringkasan
-    printf("\n=== RINGKASAN MEDICAL CHECK UP ===\n");
+    printf("\n----------------------------------\n");
+    printf("    Rincian Data Pasien dan Biaya\n");
+    printf("------------------------------------\n");
     printf("Jumlah Pasien: %d\n", jumlahPasien);
     printf("Total Biaya Keseluruhan: Rp. %.2f\n", totalBiaya);
     printf("Rata-rata Biaya per Pasien: Rp. %.2f\n", totalBiaya/jumlahPasien);
+    printf("Terima kasih telah menggunakan layanan Medical Check-Up RS UNISA!\n");
+
     
     return 0;
 }

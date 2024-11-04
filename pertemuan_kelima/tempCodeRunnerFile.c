@@ -1,0 +1,1 @@
+lanjut == 'y' || lanjut == 'Y'
