@@ -1,1 +1,1 @@
-lanjut == 'y' || lanjut == 'Y'
+kota

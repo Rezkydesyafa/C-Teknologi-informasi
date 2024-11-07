@@ -42,7 +42,18 @@ int main() {
 
     for (int i = 0; i < 20; i++) {
         printf("%d. %s : %s\n", i + 1,list_data_diri[i], data_diri[i]);
+
+        
     }
+    for (int i = 0; i < 20; i++) {
+        printf ("masukan nama : ", i + 1,list_data_diri[i]);
+        scanf(" %[^\n]", data_diri[i]);
+        
+    }
+
 
     return 0;
 }
+
+
+

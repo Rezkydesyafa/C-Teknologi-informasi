@@ -5,8 +5,8 @@ int main() {
     char nama[50], jenisKelamin[10], lanjut;
     int umur, pilihan, jumlahPasien = 0;
     float totalBiaya = 0;
-    
-    do {
+   do  
+    {
         printf("------------------------------------\n");
         printf("     Medical Check-Up RS UNISA   \n");
         printf("------------------------------------\n");
@@ -53,7 +53,7 @@ int main() {
                 // Diskon berdasarkan umur
                 if (umur > 60) {
                     printf("\nAnda mendapat diskon 20%% untuk lansia\n");
-                    biaya = biaya * 0.8;
+                    biaya = biaya - (biaya*0.20);
                 } else if (umur < 12) {
                     printf("\nAnda mendapat diskon 15%% untuk anak-anak\n");
                     biaya = biaya * 0.85;
@@ -68,6 +68,7 @@ int main() {
         } while (1);
         
         jumlahPasien++;
+        
         
         printf("\nApakah ada pasien lain? (y/n): ");
         scanf(" %c", &lanjut);
@@ -84,3 +85,4 @@ int main() {
     
     return 0;
 }
+
