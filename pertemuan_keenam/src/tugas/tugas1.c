@@ -1,55 +1,49 @@
 #include <stdio.h>
-#include <ctype.h>  // Menyertakan pustaka ctype.h
+#include <ctype.h> 
 
 // Fungsi untuk enkripsi dan dekripsi Caesar Cipher
-void caesar_cipher(int shift, int mode) {
-    int text;
+void caesar_cipher(int pergeseran, int mode) {
+    int teks;
 
-    printf("Masukkan teks yang ingin diproses (akhiri dengan Enter):\n");
-    while ((text = getchar()) != '\n') {  // Membaca hingga newline
-        if (isalpha(text)) {  // Memeriksa apakah karakter adalah huruf
-            if (islower(text)) {
-                // Jika huruf kecil
-                text = ((text - 'a' + mode * shift) % 26 + 26) % 26 + 'a';
-            } else if (isupper(text)) {
-                // Jika huruf besar
-                text = ((text - 'A' + mode * shift) % 26 + 26) % 26 + 'A';
-            }
+    printf("Masukkan teks yang ingin di ubah :\n");
+    while ((teks = getchar()) != '\n') {
+        if ( (teks)) { 
+            if (islower(teks)) {
+                teks = ((teks - 'a' + mode * pergeseran) % 26 + 26) % 26 + 'a';
+            } else if (isupper(teks)) {
+                teks = ((teks - 'A' + mode * pergeseran) % 26 + 26) % 26 + 'A';
+            } else if (isdigit(teks)) {
+            teks = ((teks - '0' + mode * pergeseran) % 10 + 10) % 10 + '0';
         }
-        putchar(text);  // Menampilkan karakter hasil enkripsi atau dekripsi
+        }
+        putchar(teks);
     }
-    putchar('\n');  // Baris baru setelah input selesai3
+    putchar('\n');  
 }
 
 int main() {
-    int shift, choice;
+    int pergeseran, pilihan;
 
-    // Pilihan untuk enkripsi atau dekripsi
+    printf("====================================\n");
+    printf("      Welcome to Caesar Cipher      \n");
+    printf("====================================\n");
     printf("Pilih mode:\n");
     printf("1. Enkripsi\n");
     printf("2. Dekripsi\n");
-    printf("Masukkan pilihan (1 atau 2): ");
-    scanf("%d", &choice);
+    printf("Masukkan pilihan : ");
+    scanf("%d", &pilihan);
 
-    if (choice != 1 && choice != 2) {
+    if (pilihan != 1 && pilihan != 2) {
         printf("Pilihan tidak valid.\n");
-        return 1;
+        return 0;
     }
-
     printf("Masukkan besar pergeseran kunci: ");
-    scanf("%d", &shift);
+    scanf("%d", &pergeseran); 
 
-    // Normalisasi shift jika negatif atau lebih dari 26
-    shift = shift % 26;
-    if (shift < 0) shift += 26;
+    // Jika pilihan adalah dekripsi, pergeseran menjadi negatif
+    int mode = (pilihan == 1) ? 1 : -1;
 
-    // Mengabaikan karakter newline setelah memasukkan shift dan pilihan
-    getchar(); 
-
-    // Jika pilihan adalah dekripsi, shift menjadi negatif
-    int mode = (choice == 1) ? 1 : -1;
-
-    caesar_cipher(shift, mode);
+    caesar_cipher(pergeseran, mode);
 
     return 0;
 }
