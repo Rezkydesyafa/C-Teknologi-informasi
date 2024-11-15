@@ -4,5 +4,6 @@
     "aktivitas_mhs2.C": "cpp",
     "ctype.h": "c",
     "stdio.h": "c"
-  }
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }

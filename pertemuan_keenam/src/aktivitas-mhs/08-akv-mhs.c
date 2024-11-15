@@ -3,10 +3,10 @@
 
 int main()
 {
-    
+
     int *ptr;
     int n, i;
-    n = 5;
+    n = 10;
 
     printf("Enter number of elements: %d\n", n);
     ptr = (int *)calloc(n, sizeof(int));
@@ -25,7 +25,8 @@ int main()
         }
 
         printf("The elements of the array are: ");
-        for (i = 0; i < n; ++i) {
+        for (i = 0; i < n; ++i)
+        {
             printf("%d, ", ptr[i]);
         }
     }

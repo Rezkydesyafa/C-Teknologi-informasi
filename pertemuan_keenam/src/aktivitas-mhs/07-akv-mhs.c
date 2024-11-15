@@ -10,7 +10,7 @@ void main()
 
     for (int i = 0; i < 5; i++)
     {
-        printf("Pelanggan dengan nomer antrian %c seilahkan ke loket!\n", *ptr_current);
+        printf("Pelanggan dengan nomer antrian %c silahkan ke loket!\n", *ptr_current);
         printf("Saat ini CS sedang melayani: %c\n", *ptr_current);
         printf("------- Tekan Enter Next ------------");
         getchar();
