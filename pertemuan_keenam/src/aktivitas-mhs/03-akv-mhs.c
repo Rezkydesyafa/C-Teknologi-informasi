@@ -25,7 +25,6 @@ void tampilkan_grafik_nilai(int nilai[])
         printf("\n");
     }
 }
-
 int main()
 {
     int nilai[11];

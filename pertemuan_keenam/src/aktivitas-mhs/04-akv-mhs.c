@@ -2,7 +2,7 @@
 int main()
 {
     int disp[2][3];
-
+`
     int i, j;
     for (i = 0; i < 2; i++)
     {

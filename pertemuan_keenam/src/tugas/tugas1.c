@@ -7,7 +7,7 @@ void caesar_cipher(int pergeseran, int mode)
     int teks;
 
     printf("Masukkan teks yang ingin di ubah :\n");
-    getchar();  
+    getchar();
     while ((teks = getchar()) != '\n')
     {
         if ((teks))
