@@ -25,7 +25,7 @@ int main()
     for (int i = 0; i < n; i++)
     {
         printf("data[%d] = %c\n", i, ptr[i]);
-    }   
+    }
     // Modifikasi array
     printf("--------------------------------------------\n");
     printf("Masukkan indeks yang ingin diubah: ", n - 1);
@@ -37,8 +37,7 @@ int main()
         printf("Masukkan nilai baru: ");
         scanf(" %c", &data_baru);
         ptr[index] = data_baru;
-    }
-    else
+    }    else
     {
         printf("Indeks tidak valid.\n");
     }

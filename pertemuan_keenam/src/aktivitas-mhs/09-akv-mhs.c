@@ -15,7 +15,7 @@ int main()
     if (ptr == NULL)
     {
         printf("Memory not allocated.\n");
-        exit(0);
+        exit(0);    
     }
     else
     {
