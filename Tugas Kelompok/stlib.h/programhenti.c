@@ -4,7 +4,7 @@
 int main()
 {
     int pilihan;
-    printf("Pilih opsi (1 untuk melanjutkan, 0 untuk keluar): ");
+    printf("Pilih opsi 1 melanjutkan, 0 keluar: ");
     scanf("%d", &pilihan);
 
     if (pilihan == 0)
