@@ -9,7 +9,7 @@ int main()
 
     // array dinamis
     ptr = (char *)malloc(n * sizeof(char));
-    if (ptr == NULL)
+    if (ptr == NULL) 
     {
         printf("Gagal mengalokasikan memori.\n");
         exit(0);
