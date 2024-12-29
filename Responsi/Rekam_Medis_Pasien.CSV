@@ -1,0 +1,3 @@
+ID,Nama,Umur,Dokter,Riwayat,Penyakit,Obat,Metode Pembayaran,Biaya
+P001,Ujang Kusnadi,37,Dr. Sari Heriawati,Rawat Inap,-,Resep Dokter,,0.00
+P002,Krisna Ezakobri,64,Dr. Tita warista,Operasi,-,Resep Dokter,QRIS,3000000.00

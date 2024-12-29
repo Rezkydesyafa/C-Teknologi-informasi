@@ -53,6 +53,7 @@ void tampilkanDataRekursif(int index, int jumlahPasien)
     printf("Metode Pembayaran : %s\n", metode_pembayaran[index]);
     printf("Biaya             : %.2f\n", biaya[index]);
     printf("member            : %s\n", member[index]);
+    printf("-----------------------------\n");
     // Memanggil fungsi ini lagi untuk menampilkan data pasien berikutnya
     tampilkanDataRekursif(index + 1, jumlahPasien);
 }
@@ -64,8 +65,8 @@ void tampilkanData(int jumlahPasien)
     printf("         Data Pasien         \n");
     printf("-----------------------------\n");
     tampilkanDataRekursif(0, jumlahPasien);
-    =
-        printf("-----------------------------\n");
+
+    printf("-----------------------------\n");
 }
 
 // Fungsi untuk pembayaran

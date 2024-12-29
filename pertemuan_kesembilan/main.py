@@ -1,8 +1,8 @@
 print("==================================================")
 print("                Masukkan Data Anda                ")
 print("==================================================")
-
-# Mengumpulkan data
+mai
+# list data
 Nama_Lengkap        = input("1. Nama Lengkap            : ")
 Umur                = input("2. Umur                    : ")
 asal_kota           = input("3. Asal Kota               : ")
@@ -45,3 +45,13 @@ print("LinkedIn Profile       : " + LinkedIn)
 print("Github Profile         : " + Github)
 print("Cita-Cita              : " + Cita_Cita)
 print("===================================")
+print(" Terima kasih telah mengisi data diri Anda!")
+print("===================================\n")
+
+
+print("Hallo teman teman kenalin nih, Namaku ",Nama_Lengkap,
+    " Umur aku masi balita ko, contohnya ",Umur,
+    " tahun hehe \n, Asal aku dari bumi bagian barat, tau kan dimana?? Yap di ",
+    asal_kota ,"\n tapi sekarang lagi di kota yang selalu ada cerita ",domisili,"🫢🫢.")
+print("----------------------------------")
+

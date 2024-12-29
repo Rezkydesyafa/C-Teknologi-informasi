@@ -14,7 +14,6 @@ void tambahkan_pasien(char *nama, int umur, char *keluhan)
         printf("Antrian penuh! Tidak dapat menambahkan pasien baru.\n");
         return;
     }
-
     posisi_belakang = (posisi_belakang + 1);
     strncpy(nama_pasien[posisi_belakang], nama, 50);
     strncpy(keluhan_pasien[posisi_belakang], keluhan, 50);
@@ -79,7 +78,6 @@ int main()
         printf("            DAFTAR PASIEN            \n");
         printf("========================================\n");
         tampilkan_antrian();
-
         printf("========================================\n");
         printf("      Loket Pasien Rumah sakit Unisa   \n");
         printf("========================================\n");
@@ -89,7 +87,6 @@ int main()
         printf("Pilih opsi: ");
         scanf("%d", &pilihan);
         printf("\n========================================\n");
-
         switch (pilihan)
         {
         case 1:
